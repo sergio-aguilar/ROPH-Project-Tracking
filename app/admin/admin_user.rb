@@ -10,8 +10,9 @@ ActiveAdmin.register AdminUser do
   filter :email                       
 
   form do |f|                         
-    f.inputs "Admin Details" do       
-      f.input :email                  
+    f.inputs "Admin Details blah blah" do       
+      f.input :email
+      f.input :name                  
       f.input :password               
       f.input :password_confirmation  
     end                               
