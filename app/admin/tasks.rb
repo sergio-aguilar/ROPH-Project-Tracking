@@ -1,6 +1,10 @@
 ActiveAdmin.register Task do
 <<<<<<< HEAD
+<<<<<<< HEAD
   scope :all, default: :true
+=======
+  scope :all, :default => true
+>>>>>>> tweak-task
   scope :due_this_week do |tasks|
     tasks.where('due_date > ? and due_date < ?', Time.now, 1.week.from_now)
   end
@@ -8,10 +12,16 @@ ActiveAdmin.register Task do
     tasks.where('due_date < ?', Time.now)
   end
   scope :mine do |tasks|
+<<<<<<< HEAD
     tasks.where(admin_user_id: current_admin_user.id)
   end
   
 =======
+>>>>>>> tweak-task
+=======
+    tasks.where(:admin_user_id => current_admin_user.id)
+  end
+  
 >>>>>>> tweak-task
   show do
     panel "Task Details" do
